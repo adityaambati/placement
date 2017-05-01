@@ -40,7 +40,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 		else 
 		{
 		$sql="insert into student values('$rollno','$name','$branch','$gender','$dob','$ssc_per','$ssc_school','$ssc_board','$inter_per','$inter_college','$inter_board','$ug_per','$backlogs','$email','$contact','$aadhaar','$passport');";
-		$sql1="insert into admin values('$rollno','$password')";
+		$sql1="insert into student_login values('$rollno','$password')";
 		$query=mysqli_query($db,$sql);
 		$query1=mysqli_query($db,$sql1);
 		if(!$query && !$query1)
@@ -140,7 +140,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 </tr><tr>
 <td  align="center">
 <input type="submit" value="Register"/>&nbsp;&nbsp;
-<input type="button" value="login" onclick="window.location.href='login.php'"/>
+<input type="button" value="login" onclick="window.location.href='student_login.php'"/>
 </td>
 </tr>
 </table></form>
